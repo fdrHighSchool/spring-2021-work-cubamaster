@@ -11,7 +11,14 @@ public class SuperArray {
         arr = new int[size];
     }
 
-    public void addToTheEnd(int value) {
+    //Overload
+    public void add(int value) {
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == 0) {
+                arr[i] = value;
+                return;
+            }
+        }
         int [] arr2 = new int[arr.length + 1];
         for (int i = 0; i < arr.length; i++) {
             arr2[i] = arr[i];
@@ -47,10 +54,7 @@ public class SuperArray {
     }
 
     public void growArray(int size) {
-        if (size <= arr.length) {
-            System.out.println("ERROR: size must be greater than the length of the array");
-        }
-        int [] arr2 = new int[size];
+        int [] arr2 = new int[arr.length + size];
         for (int i = 0; i < arr.length; i++) {
             arr2[i] = arr[i];
         }
