@@ -79,6 +79,15 @@ public class SuperArray {
         return Arrays.toString(arr);
     }
 
+    public boolean isEmpty() {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public int[] getArr() {
         return arr;
     }
