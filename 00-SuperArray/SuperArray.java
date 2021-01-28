@@ -12,6 +12,8 @@ public class SuperArray {
     }
 
     //Overload
+
+
     public void add(int value) {
         /**
          * search if I have 0 in my current size array
@@ -109,6 +111,21 @@ public class SuperArray {
             }
         }
         return true;
+    }
+
+    //overload
+    public boolean isEmpty(int index) {
+        if(index < 0 || index > (arr.length+1)) { // check that the index is in the array
+            System.out.println("ERROR: impossible index ");
+            System.out.println("");
+            return false;
+        }
+        if (arr[index] == 0) { // check that the arr[index] is empty
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     public int[] getArr() {
