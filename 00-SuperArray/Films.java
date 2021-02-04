@@ -2,6 +2,9 @@ public class Films {
 
     SuperArray film_budgets = new SuperArray(0);
     SuperArray film_box_office = new SuperArray(0);
+
+    public Films()
+    {
         film_budgets.add(237000000);
         film_budgets.add(138000000);
         film_budgets.add(230000000);
@@ -12,4 +15,6 @@ public class Films {
         film_budgets.add(321000000);
         film_budgets.add(127000000);
         film_budgets.add(329000000);
+    }
+
 }
