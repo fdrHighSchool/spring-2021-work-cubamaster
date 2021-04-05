@@ -14,13 +14,4 @@ public class StringFormatter {
         int  basicGapWidth = (formattedLen - totalLetters(wordlist)) / (wordlist.size() - 1);
         return basicGapWidth;
     }
-
-    public static int leftoverSpaces(List<String> wordList, int formattedLen) {
-        int leftoverSpaces = (formattedLen - totalLetters(wordList)) % (wordList.size() - 1);
-        return leftoverSpaces;
-    }
-
-
-
-
 }
