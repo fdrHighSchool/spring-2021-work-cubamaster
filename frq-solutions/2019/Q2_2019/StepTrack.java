@@ -25,9 +25,4 @@ public class StepTrack {
             this.active_days += 1;
         }
     }
-
-
-
-
-
 }
