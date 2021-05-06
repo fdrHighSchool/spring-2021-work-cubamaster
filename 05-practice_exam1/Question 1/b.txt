@@ -1,0 +1,8 @@
+ private String[] mixedWords(String[] words) {
+        String [] words2 = new String[words.length];
+        for(int i = 0; i < words.length; i+= 2) {
+            words2[i] = recombine(words[i], words[i + 1]);
+            words2[i+1] = recombine(words[i+1], words[i]);
+        }
+        return words2;
+    }
