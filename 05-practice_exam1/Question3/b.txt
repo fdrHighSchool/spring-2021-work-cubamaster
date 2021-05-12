@@ -1,0 +1,15 @@
+public boolean updateAllTemps(double tolerance) {
+        int[][] arr = new int[temps.length][temps[0].length];
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = 0l j < arr[i].length; j++) {
+                arr[i][j] = computeTemp(temps[i][j]);
+            }
+        }
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = 0; j <arr[i].length; j++) {
+                if(Math.abs(arr[i][j] - temps[i][j]) > tolerance)
+                    return false;
+            }
+        }
+        return true;
+    }
