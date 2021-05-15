@@ -1,0 +1,6 @@
+public static boolean isLongSeq(int n) {
+        int count = hailstonelength(n);
+        if(count > n)
+            return true;
+        return false;
+    }
