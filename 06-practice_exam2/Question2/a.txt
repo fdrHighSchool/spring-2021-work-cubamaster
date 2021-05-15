@@ -1,0 +1,34 @@
+public class GameSpinner {
+    private int sectors;
+    private int currentRun;
+    private int previousRun;
+
+    public GameSpinner(int n) {
+        sectors = n;
+        currentRun = 0;
+        previousRun = 0;
+    }
+
+    public int spin() {
+        int random = (int) (Math.random() * sectors) + 1;
+        if(previousRun == 0) {
+            previousRun = random;
+            currentRun++;
+        }
+        else if(random == previousRun) {
+            currentRun++;
+            previousRun = random;
+        }
+        else if(random != previousRun) {
+            currentRun = 1;
+            previousRun = random;
+        }
+        return random;
+    }
+
+
+
+    public int CurrentRun() {
+        return currentRun;
+    }
+}
