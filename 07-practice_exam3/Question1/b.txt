@@ -1,0 +1,15 @@
+public String findBetterGuess(String guess1, String guess2) {
+        int score1 = scoreGuessing(guess1);
+        int score2 = scoreGuessing(guess2);
+        if(score1 != score2) {
+            if(score1 > score2)
+                return guess1;
+            if(score2 > score1)
+                return guess2;
+        }
+        if(guess1.compareTo(guess2) > 0)
+            return guess1;
+        else
+            return guess2;
+    }
+}
