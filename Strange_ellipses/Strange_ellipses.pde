@@ -1,26 +1,25 @@
 void setup(){
+  surface.setTitle("Strange ellipses");
+  surface.setResizable(true);
+  surface.setLocation(300, 200);
   size(640, 360);
   noSmooth();
   fill(126);
-  background(102);
+  background(200, 150, 150);
 }
 void draw() {
   if (mousePressed) {
     stroke(200);
-    ellipse(mouseX-66, mouseY, mouseX+66, mouseY);
-  } else {
+    fill(220,20,60);
+  } 
+  else {
     stroke(0);
+    fill(30,144,255);
   }
+  ellipse(mouseX-66, mouseY, mouseX+66, mouseY);
   
+  if(keyPressed) {
+    clear();
+    background(200, 150, 150);
+  }
 }
-
-//void draw(){
-// background(192, 64, 0);
-//  ellipse(mouseX, mouseY, 20, 20);
-//  if (mousePressed) {
-//    stroke(255);
-//  } else {
-//    stroke(0);
-//  }
-  //ellipse(mouseX-66, mouseY, mouseX+66, mouseY);
-//} 
