@@ -32,9 +32,18 @@ void draw() {
   if(frameCount % 5 == 0) {
     x.add(0, x.get(0) + dx[dir]);
     y.add(0, y.get(0) + dy[dir]);
-    if(x.get(0) < 0 || y.get(0) < 0 || x.get(0) >= h || y.get(0) >= w) {
-      inGame = false;
-    }
+   // if(x.get(0) < 0 || y.get(0) < 0 || x.get(0) >= h || y.get(0) >= w) {
+     // inGame = false;
+   // }
+   
+   if(x.get(0) < 0) 
+      x.set(0, h);
+   if(x.get(0) > h)
+      x.set(0, 0);
+   if(y.get(0) < 0)
+     y.set(0, w);
+   if(y.get(0) > w) 
+     y.set(0, 0);
     for(int i = 1; i < x.size(); i++) {
       if(x.get(0) == x.get(i) && y.get(0) == y.get(i)) 
       inGame = false;
