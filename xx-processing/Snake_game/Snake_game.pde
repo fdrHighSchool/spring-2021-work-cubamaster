@@ -22,12 +22,6 @@ void setup() {
 
 void draw() {
   background(255);
-  for(int i = 0; i < w; i++) {
-    line(i * bs, 0, i*bs, height);
-  }
-  for(int i = 0; i < h; i++) {
-    line(0, i * bs, width, i * bs);
-  }
   for(int i = 0; i < x.size(); i++) {
     fill(10, 198, 10);
     rect(x.get(i) * bs, y.get(i) * bs, bs, bs);
@@ -72,6 +66,7 @@ void draw() {
       y.add(10);
       y.add(10);
       y.add(10);
+      score = 3;
       inGame = true;
     }
     
